@@ -58,61 +58,49 @@
 
 ## Installation
 
-### Option 1: Download Pre-built Binary
+### Option 1: One-Line Installation (curl)
 
-1. Download the latest `memory-mcp-server` binary from GitHub Releases
-2. Make the binary executable:
+The easiest way to install is with the one-line installer, which automatically downloads the latest version and installs it to `~/.local/bin` in your home directory:
 
-   ```
-   chmod +x /path/to/memory-mcp-server
-   ```
+```bash
+curl -fsSL https://raw.githubusercontent.com/5km/memory-mcp-server/main/install.sh | bash
+```
 
-3. Move the binary to a directory in your PATH (optional):
+The installer will:
 
-   ```
-   sudo mv /path/to/memory-mcp-server /usr/local/bin/
-   ```
+* Create `~/.local/bin` if it doesn't exist
+* Add this directory to your PATH (in .zshrc or .bashrc)
+* Download and install the latest version
+* Make the binary executable
 
 ### Option 2: Build from Source
 
 1. Clone the repository:
 
-   ```
+   ```bash
    git clone https://github.com/5km/memory-mcp-server.git
    cd memory-mcp-server
    ```
 
-2. Choose a build option:
+2. Build the project:
 
-   ```
-   # Option A: Build for Apple Silicon (arm64)
-   swift build -c release --arch arm64 -j $(sysctl -n hw.ncpu)
-
-   # Option B: Build for Intel (x86_64)
-   swift build -c release --arch x86_64 -j $(sysctl -n hw.ncpu)
-
-   # Option C: Build Universal Binary (both arm64 and x86_64)
-   swift build -c release --arch arm64 -j $(sysctl -n hw.ncpu)
-   swift build -c release --arch x86_64 -j $(sysctl -n hw.ncpu)
-   mkdir -p .build/bin
-   lipo -create \
-     -output .build/bin/memory-mcp-server \
-     $(swift build -c release --arch arm64 --show-bin-path)/memory-mcp-server \
-     $(swift build -c release --arch x86_64 --show-bin-path)/memory-mcp-server
+   ```bash
+   swift build -c release
    ```
 
-3. Install the binary (optional):
+3. Install the binary:
 
+   ```bash
+   # Install to user directory (recommended, no sudo required)
+   mkdir -p ~/.local/bin
+   cp $(swift build -c release --show-bin-path)/memory-mcp-server ~/.local/bin/
    ```
-   # After building, choose ONE of these commands based on your build choice:
-   # If you built for arm64 (Option A):
-   sudo cp .build/apple/Products/Release/memory-mcp-server /usr/local/bin/
 
-   # If you built for x86_64 (Option B):
-   sudo cp .build/x86_64-apple-macosx/release/memory-mcp-server /usr/local/bin/
+   Make sure `~/.local/bin` is in your PATH by adding to your shell configuration file:
 
-   # If you built universal binary (Option C):
-   sudo cp .build/bin/memory-mcp-server /usr/local/bin/
+   ```bash
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc  # or ~/.bashrc
+   source ~/.zshrc  # or source ~/.bashrc
    ```
 
 ## Command Line Arguments
@@ -124,7 +112,7 @@ The server supports the following command line arguments:
 
 Example usage:
 
-```
+```bash
 # Display help information
 memory-mcp-server --help
 
@@ -143,6 +131,10 @@ The server supports the following environment variables:
   * Can be an absolute path or relative to the current working directory
 
 You can check the configured file path in the server logs when starting the server.
+
+```bash
+export MEMORY_FILE_PATH="/path/to/your/memory.json"
+```
 
 ### Configure for Claude.app
 
