@@ -1,0 +1,42 @@
+{
+  "originHash" : "1f1ff679710d135d0235be4aa33dcb4302aa87c1bc413f7af331a3cc42e86a73",
+  "pins" : [
+    {
+      "identity" : "jsonrpc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gsabran/JSONRPC",
+      "state" : {
+        "revision" : "56c936de4e4385287dc18f260557dbdf443a55bd",
+        "version" : "0.9.1"
+      }
+    },
+    {
+      "identity" : "mcp-swift-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gsabran/mcp-swift-sdk",
+      "state" : {
+        "revision" : "5399cccd2c5b481e641cbb3ccdba12bf5bd1d2d5",
+        "version" : "0.2.3"
+      }
+    },
+    {
+      "identity" : "swift-json-schema",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ajevans99/swift-json-schema",
+      "state" : {
+        "revision" : "707fc4c2d53138e8fbb4ee9e6669b050ba4b2239",
+        "version" : "0.3.2"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax",
+      "state" : {
+        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "version" : "600.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

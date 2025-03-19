@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:memory-mcp-server}",
+      "name": "Debug memory-mcp-server",
+      "program": "${workspaceFolder:memory-mcp-server}/.build/debug/memory-mcp-server",
+      "preLaunchTask": "swift: Build Debug memory-mcp-server"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:memory-mcp-server}",
+      "name": "Release memory-mcp-server",
+      "program": "${workspaceFolder:memory-mcp-server}/.build/release/memory-mcp-server",
+      "preLaunchTask": "swift: Build Release memory-mcp-server"
+    }
+  ]
+}
