@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Memory MCP Server Installation Script
-# https://github.com/5km/memory-mcp-server
+# https://github.com/okooo5km/memory-mcp-server
 
 set -e
 
@@ -60,7 +60,7 @@ fi
 
 # Download and install the latest version
 echo -e "${BLUE}Downloading the latest version...${NC}"
-if ! curl -L "https://github.com/5km/memory-mcp-server/releases/latest/download/memory-mcp-server.tar.gz" | tar xz -C "$HOME/.local/bin"; then
+if ! curl -L "https://github.com/okooo5km/memory-mcp-server/releases/latest/download/memory-mcp-server.tar.gz" | tar xz -C "$HOME/.local/bin"; then
   echo -e "${RED}Error: Failed to download or extract the binary.${NC}"
   exit 1
 fi

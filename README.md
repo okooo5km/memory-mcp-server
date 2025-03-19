@@ -63,7 +63,7 @@
 The easiest way to install is with the one-line installer, which automatically downloads the latest version and installs it to `~/.local/bin` in your home directory:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/5km/memory-mcp-server/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/okooo5km/memory-mcp-server/main/install.sh | bash
 ```
 
 The installer will:
@@ -78,7 +78,7 @@ The installer will:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/5km/memory-mcp-server.git
+   git clone https://github.com/okooo5km/memory-mcp-server.git
    cd memory-mcp-server
    ```
 
