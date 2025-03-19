@@ -115,6 +115,23 @@
    sudo cp .build/bin/memory-mcp-server /usr/local/bin/
    ```
 
+## Command Line Arguments
+
+The server supports the following command line arguments:
+
+* `-h, --help`: Display help information about the server, its usage, and available options
+* `-v, --version`: Display the version number of the memory-mcp-server
+
+Example usage:
+
+```
+# Display help information
+memory-mcp-server --help
+
+# Display version information
+memory-mcp-server --version
+```
+
 ## Configuration
 
 ### Environment Variables
@@ -278,6 +295,20 @@ The knowledge graph is persisted to disk as a line-delimited JSON file, where ea
 ## Version History
 
 See GitHub Releases for version history and changelog.
+
+## ☕️ Support the Project
+
+If you find Memory MCP Server helpful, please consider supporting its development:
+
+* ⭐️ Star the project on GitHub
+* 🐛 Report bugs or suggest features
+* 💝 Support via:
+
+<p align="center">
+  <a href="https://buymeacoffee.com/okooo5km">
+    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=okooo5km&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" style="border-radius: 8px;" />
+  </a>
+</p>
 
 ## License
 
