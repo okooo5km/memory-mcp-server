@@ -6,14 +6,14 @@ import JSONSchemaBuilder
 import MCPServer
 import OSLog
 
-// 定义版本信息
+// Define version information
 let APP_VERSION = "0.1.1"
 let APP_NAME = "memory-mcp-server"
 
 let mcpLogger = Logger(
     subsystem: Bundle.main.bundleIdentifier.map { "\($0).mcp" } ?? "tech.5km.memory.mcp-server", category: "mcp")
 
-// 解析命令行参数
+// Parse command line arguments
 func processCommandLineArguments() -> Bool {
     let arguments = CommandLine.arguments
 
@@ -30,7 +30,7 @@ func processCommandLineArguments() -> Bool {
     return true
 }
 
-// 显示帮助信息
+// Display help information
 func printHelp() {
     print(
         """
@@ -53,7 +53,7 @@ func printHelp() {
         """)
 }
 
-// 只有在没有特殊命令行参数时才运行服务器
+// Only run the server if no special command line arguments are provided
 if processCommandLineArguments() {
     let transport = Transport.stdio()
     func proxy(_ transport: Transport) -> Transport {
