@@ -2,7 +2,6 @@
 // https://docs.swift.org/swift-book
 
 import Foundation
-import JSONSchemaBuilder
 import MCPServer
 import OSLog
 
