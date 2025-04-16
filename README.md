@@ -2,6 +2,8 @@
 
 > A Model Context Protocol server that provides knowledge graph management capabilities. This server enables LLMs to create, read, update, and delete entities and relations in a persistent knowledge graph, helping AI assistants maintain memory across conversations. This is a Swift implementation of the official [TypeScript Memory MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory).
 
+**Note:** This Swift version requires **macOS 14.0 or later**. For broader platform support (including Windows, Linux, and macOS 11.0+), check out the Go language implementation: **[memory-mcp-server-go](https://github.com/okooo5km/memory-mcp-server-go)**.
+
 ![Swift Platform](https://img.shields.io/badge/platform-macOS-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
